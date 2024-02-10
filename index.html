@@ -9,7 +9,19 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<style type="text/css">
 		body {
-			
+			background-color: #0d1117;
+			color: white;
+		}
+		.nav-tabs {
+			border: none;
+		}
+		.nav-tabs .nav-link {
+			background-color: #282828;
+			color: #ccc;
+		}
+		.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+			background-color: #383838;
+			color: white;
 		}
 		.header-row {
 			text-align: center;
@@ -44,6 +56,23 @@
 		.accordion {
 			margin-bottom: 20px;
 		}
+		.accordion-button {
+			background-color: #282828;
+			color: white;
+		}
+		.accordion-button:not(.collapsed) {
+			background-color: #383838;
+			color: white;
+		}
+		.accordion-button::after {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+		}
+		.accordion-button:not(.collapsed)::after {
+			background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+		}
+		.accordion-item {
+			background-color: #282828;
+		}
 		@media (max-width: 767px) {
 			/* Small devices (tablets, 768px and less) */
 			body {
@@ -69,15 +98,17 @@
 	<div class="container">
 		<div class="row header-row">
 			<h1 id="header">The Commissioner's Guide</h1>
-			<h3 id="sub-header">Learn how to commission art online</h3>
+			<h3 id="sub-header">Learn How to Commission Art Online</h3>
+			<h5>Written by <a href="https://theyoostink.github.io/commissions/" target="_blank">Yoostink</a></h5>
 		</div>
 		<div class="row">
 			<nav>
 				<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					<a class="nav-item nav-link active" id="nav-general-tab" data-toggle="tab" href="#nav-general" role="tab" aria-controls="nav-general" aria-selected="false">General</a>
-					<a class="nav-item nav-link" id="nav-twitter-tab" data-toggle="tab" href="#nav-twitter" role="tab" aria-controls="nav-twitter" aria-selected="false">Twitter</a>
+					<a class="nav-item nav-link" id="nav-twitter-tab" data-toggle="tab" href="#nav-twitter" role="tab" aria-controls="nav-twitter" aria-selected="false">Twitter / X</a>
 					<a class="nav-item nav-link" id="nav-skeb-tab" data-toggle="tab" href="#nav-skeb" role="tab" aria-controls="nav-skeb" aria-selected="false">Skeb</a>
 					<a class="nav-item nav-link" id="nav-pixiv-tab" data-toggle="tab" href="#nav-pixiv" role="tab" aria-controls="nav-pixiv" aria-selected="false">pixiv</a>
+					<a class="nav-item nav-link" id="nav-vgen-tab" data-toggle="tab" href="#nav-vgen" role="tab" aria-controls="nav-vgen" aria-selected="false">VGen</a>
 					<a class="nav-item nav-link" id="nav-other-tab" data-toggle="tab" href="#nav-other" role="tab" aria-controls="nav-other" aria-selected="false">Other</a>
 				</div>
 			</nav>
@@ -114,28 +145,28 @@
 						<li>
 							<p id="general-what">
 							<strong>What is commissioning?</strong><br/>
-							To commission is to order to be made according to the Merriam-Webster dictionary. In the context of commissioning art online, a commissioner places an order to an artist to have a piece of artwork made. The artwork can be traditional (painted physically on paper, canvas, or other material or crafted) or digital (drawn with computer software using tools like a tablet or stylus as the instruments). The artwork can be a drawing, animation, 3D model, plush doll, and even other media like music and writing.<br/>
+							"To commission" is "to order to be made" according to the Merriam-Webster dictionary. In the context of commissioning art online, a commissioner places an order to an artist to have a piece of artwork made. The artwork can be traditional (be painted physically on paper, canvas, or other material or be crafted) or digital (be drawn with computer software using tools like a tablet or stylus as the instruments). The artwork can be a drawing, animation, 3D model, plush doll, or even another piece of media like a song or writing.<br/>
 							An example of a historical art commission is the artwork on the <a href="https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling">ceiling of the Sistine Chapel</a>. This series of artworks was painted by Michelangelo the famous Renaissance artist and commissioned by Pope Julius II. Other examples include <a href="https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)">The Last Supper</a> done by Leonardo da Vinci and commissioned by Ludovico Sforza (Duke of Milan), <a href="https://en.wikipedia.org/wiki/Guernica_(Picasso)">Guernica</a> done by Pablo Picasso and commissioned by the Spanish Republican government, and <a href="https://en.wikipedia.org/wiki/Transfiguration_(Raphael)">The Transfiguration</a> done by Rafael and commissioned by Cardinal Giulio de Medici (Pope Clement VII).
 							</p>
 						</li>
 						<li>
 							<p id="general-why">
 							<strong>Why commission artwork?</strong><br/>
-							When commissioning art, you as the commissioner can be involved in the creative art-making process with the artist. You can request what you want and can usually request adjustments throughout the process. Depending on the artist, you can also claim credit as the commissioner paired with the credit to the artist of course. Commissioning artwork also financially supports your favorite artists.
+							When commissioning art, you as the commissioner can be involved in the creative art-making process alongside the artist. You can request what you want and can usually request adjustments throughout the process. Depending on the artist, you can also claim credit as the commissioner paired with the credit to the artist of course. Commissioning artwork also financially supports your favorite artists. Essentially, the artist is compensated to bring your vision to life.
 							</p>
 							<img class="images-small" src="img/tumblr_comm.jpg">
 						</li>
 						<li>
 							<p id="general-how">
 							<strong>How can I commission artwork?</strong><br/>
-							You can commission artwork in the traditional way, which is by hiring an artist to work on a project and working with them in-person. Now with the internet, we can commission artists with the power of web technology. You can directly message artists on their social media page to talk about rates, obtain a project quote, and request a commission.
+							You can commission artwork in the traditional way, which is by hiring an artist to work on a project and working with them in-person. Now with the power of web technology, we can commission artists over the Internet. You can directly message artists on their social media page to talk about rates, obtain a project quote, request a commission, and receive updates.
 							</p>
 						</li>
 						<li>
 							<p id="general-need">
 							<strong>What do I need to get started?</strong><br/>
-							First and foremost, you will need to set up a method of payment. Usually, this means you should set up a <a href="https://www.paypal.com/">PayPal</a> account tied to your credit/debit card or bank account. Many artists use PayPal to receive payments and send invoices. Some commissioning platform websites (like Skeb, pixiv, and Sketchmob to name a few) will charge your credit/debit card or PayPal account.<br/>
-							You should also have an email address (needed anyway for PayPal) so that you can communicate with artists or have an account on the same social media website (like Twitter or Instagram) that the artist uses so that you can use direct/private messages to communicate with them.
+							First and foremost, you will need to set up a method of payment so that you can pay the artist. Usually, this means you should set up a <a href="https://www.paypal.com/">PayPal</a> account tied to your credit/debit card or bank account. Many artists use PayPal to receive payments and send invoices. Some commissioning platform websites (like Skeb, pixiv, and Sketchmob to name a few) will charge your credit/debit card or PayPal account.<br/>
+							You should also have an email address (needed for PayPal anyway) so that you can communicate with artists or have an account on the same social media website (like Twitter or Instagram) that the artist uses so that you can use direct/private messages to communicate with them.<br/>
 							</p>
 						</li>
 						<li>
@@ -144,41 +175,41 @@
 							Look for the artist's commission sheet if they have published it at some point. If you cannot find it, you can message the artist for information and rates. The commission price sheet (sometimes presented on a website like carrd.co) should have basic information like payment process, rates, styles, and terms of service.<br/>
 							<u><strong>Things to look for when preparing to commission an artist:</strong></u>
 							<ul>
-								<li><strong>Payment method:</strong> PayPal, Square, Stripe, Ko-fi, Patreon, Venmo, etc.</li>
-								<li><strong>Payment agreement:</strong> upfront to enter queue, after sketch, at the end, half payment upfront and half at the end, etc.</li>
-								<li><strong>Refund policy:</strong> no refunds, only before sketch, partial refund, etc.</li>
-								<li><strong>Do's/Don't's:</strong> genres that the artist will accept and will not accept.</li>
-								<li><strong>Revision process:</strong> usually allowed at least one revision after sketch, being charged for additional revisions, refusing revisions after a certain stage especially after lineart, etc. Check to see if there are any restrictions on the number of revisions and on which stage.</li>
-								<li><strong>Timeline:</strong> the artist will usually try to provide an estimate on how long a project will take from start to finish. Of course, there are always real-life issues and delays, so please be patient if you can afford to be. If the artist has already started the project, follow up and communicate with the artist every so often to make sure the project wasn't forgotten and to get an idea when it can be resumed and completed especially if you have already paid. If there is a queue, sometimes the queue is public so that you can get an idea of when you can expect your turn. Use your best judgment when communicating with the artist about timelines. Push when you need to, but pushing needlessly and frequently can frustrate the artist.</li>
-								<li><strong>Reputation of the artist:</strong> try to find out what other clients and commissioners have said about the artist. Was working with them pleasant and smooth? Were they responsive? Did they follow request details and instructions? Anything to be wary of? Any surprises or unexpected events? Do they do non-fungible token projects (NFTs matter to many commissioners)? Are they involved in any scandals or anything questionable both related to and outside of their work?</li>
-								<li><strong>Publication:</strong> the artist can choose whether or not to publish the artwork as well as restrict you from publishing the artwork. Reposting the artwork with credit to the artist and with the artist's watermark is usually allowed, but you can ask for explicit permission and to confirm. Artists will also let you know if they do not want you to turn the artwork into non-fungible token (NFT). It is courteous to comply with the artist's request.</li>
-								<li><strong>Copyright ownership:</strong> sometimes the artist holds sole ownership, and sometimes it can be purchased or even jointly owned.</li>
-								<li><strong>Commercial Project:</strong> commercial projects differ from personal-use projects in that commercial projects have a purpose in generating income (merchandising, advertising, etc.). Commercial projects are usually priced differently from person-use projects, so expect about at least two to three times the normal price for commercial projects.</li>
-								<li><strong>Shipping:</strong> if the artwork is physically drawn/painted/crafted then they will detail shipping instructions and costs.</li>
-								<li><strong>Terms of Service:</strong> ToS includes other details about how the artist operates and collaborates and also details what happens when the terms are violated.</li>
+								<li><strong>Payment method:</strong> PayPal, Square, Stripe, Ko-fi, Patreon, Venmo, Wise, etc.</li>
+								<li><strong>Payment agreement:</strong> Upfront to enter queue, after sketch, at the end, half payment upfront and half at the end, etc.</li>
+								<li><strong>Refund policy:</strong> No refunds, only before sketch, partial refund, etc.</li>
+								<li><strong>Do's/Don't's:</strong> Genres that the artist will accept and will not accept.</li>
+								<li><strong>Revision process:</strong> Usually allowed at least one revision after sketch, being charged for additional revisions, no more revisions after a certain stage especially after lineart, etc. Check to see if there are any restrictions on the number of revisions and on which stage.</li>
+								<li><strong>Timeline:</strong> The artist will usually try to provide an estimate on how long a project will take from start to finish. Of course, there are always real-life issues and delays, so please be patient if you can afford to be. If the artist has already started the project, follow up and communicate with the artist every so often to make sure the project wasn't forgotten and to get an idea when it can be resumed and completed especially if you have already paid. If there is a queue, sometimes the queue is public so that you can get an idea of when you can expect your turn. Use your best judgment when communicating with the artist about timelines. Push when you need to, but pushing needlessly and too frequently can frustrate the artist.</li>
+								<li><strong>Reputation of the artist:</strong> Try to find out what other clients and commissioners have said about the artist. Was working with them pleasant and smooth? Were they responsive? Did they follow request details and instructions? Anything to be wary of? Any surprises or unexpected events? Do they do non-fungible token projects? Do they use AI-generation or AI-assistance? Are they involved in any scandals or anything questionable both related to and outside of their work?</li>
+								<li><strong>Publication:</strong> The artist can choose whether or not to publish the artwork as well as restrict you from publishing the artwork. Reposting the artwork with credit to the artist and with the artist's watermark is usually allowed, but you can ask for explicit permission and to confirm. Artists will also let you know if they do not want you to turn the artwork into a non-fungible token (NFT) or use it in training data for AI. Some artist may want to publish the art and/or the alternate versions on Patreon or Gumroad to sell, so they may restrict you from sharing publicly. It is courteous to comply with the artist's request.</li>
+								<li><strong>Copyright ownership:</strong> Sometimes the artist holds sole ownership, and sometimes it can be purchased or even jointly owned.</li>
+								<li><strong>Commercial Project:</strong> Commercial projects differ from personal-use projects in that commercial projects have a purpose in generating income (merchandising, advertising, etc.). Commercial projects are usually priced differently from personal-use projects, so you should expect about at least two to three times the normal price for commercial projects.</li>
+								<li><strong>Shipping:</strong> If the artwork is physically drawn/painted/crafted, then they will detail shipping instructions and costs.</li>
+								<li><strong>Terms of Service:</strong> ToS includes other details about how the artist operates and collaborates, and they also detail what happens when the terms are violated.</li>
 							</ul>
 							</p>
 						</li>
 						<li>
 							<p id="general-process">
 							<strong>What does the commissioning process generally look like?</strong><br/>
-							<p>You can also refer to the commissioning process flowchart <a href="#general-flowchart">at the top of the page</a>.</p>
+							<p>You can also refer to the commissioning process flowchart <a href="#general-flowchart">at the top of the page</a>. Since there is a financial transaction, you should treat the process as a business process. Both the commissioner and artist should be courteous and professional. Of course, it is okay to drop formalities if both parties are okay with it.</p>
 							<ul>
 								<li>
 									<u><strong>Sending a Request:</strong></u><br/>
-									When an artist is open to taking commission requests, you can generally start by sending them your request. If the rates are not known, then you can start by asking for a price sheet before jumping in with a request. Refer to their commission instructions and terms of service to see if you need to follow a certain format for sending your request. It is preferred to provide the artist with details about your character. If it is fanart, mention the character name and franchise name. If it is an original character (OC), then mention their name and maybe even personality details. Provide a list of reference images for the character, the outfit, the pose, the expression, the background, and other details. Reference images can be compiled into a Google Drive folder, a Google Doc, an imgur album, etc. Reference images help the artist visually see what you are looking for and help paint a more concrete picture that a body of text may not be able to. Remember the adage: a picture is worth a thousand words. Make sure your request text is descriptive and uses simple language. It can be long or short. You can even include a doodle with some basic figures to help the artist know what you're envisioning. If the artist is not open at the moment, then you can ask when they plan to reopen and if you can be placed on a waiting list if they have one.
+									When an artist is open to taking commission requests, you can generally start by sending them your request. If the rates are not known, then you can start by asking for a price sheet before jumping in with a request. Refer to their commission instructions and terms of service to see if you need to follow a certain format for sending your request. It is preferred to provide the artist with details about your character. If it is fanart, mention the character name and franchise name. If it is an original character (OC), then mention their name and maybe even personality details. Provide a list of reference images for the character, the outfit, the pose, the expression, the background, and other details. Reference images can be compiled into a Google Drive folder, a Google Doc, an imgur album, an imgchest album, etc. Reference images help the artist visually see what you are looking for and help paint a more concrete picture that a body of text may not be able to. Remember the adage: a picture is worth a thousand words. Make sure your request text is descriptive and uses simple language. It can be long or short. You can even include a doodle with some basic figures to help the artist know what you're envisioning. If the artist is not open at the moment, then you can ask when they plan to reopen and if you can be placed on a waiting list if they have one. Artists will generally ignore a conversation that starts with something like "Hi" or "Hello" or "How are you", because it can be seen as spam. Be upfront with what you want by sending a direct question or commission request details.
 								</li>
 								<li>
 									<u><strong>Request Types:</strong></u><br/>
-									If you are not sure if an artist is open or you are not sure if you are ready to send a request just yet, then you can contact them and ask for a price sheet (details on the costs of various options) or even a quote for your commission idea. Most artists provide various options. The most standard is the amount of body being drawn: bust, half body, and full body. Bust refers to torso-up or shoulders-up. Bust art is great for profile pictures or even emotes. Half body refers to waist-up, thighs-up, or knee-up depending on the artist. Full body refers to the full body being visible from head to toe. Artists can also offer different styles for different levels of detail and work: sketch/doodle, lineart, colored/shaded, fully rendered, etc. Additional characters add to the cost by usually 50% to 100% of the base character cost depending on the artist. Intricate/complicated details and additional objects like armor, weapons, and animal companions can also add to the cost. Backgrounds are usually not included. Some artists offer a simple white/transparent background, solid color, or gradient background for free. A more complex background will add to the cost. Sometimes, requesting a NSFW artwork will increase the cost. Alts and variants can add to the cost depending on the complexity. Rush orders can also increase the cost. You can also request to be anonymous/uncredited in the publication or ask for the commission to be private/unpublished. Some artists charge extra for private commissions.
+									If you are not sure if an artist is open or you are not sure if you are ready to send a request just yet, then you can contact them and ask for a price sheet (details on the costs of various options) or even a quote for your commission idea. Most artists provide various options. The most standard is the amount of body being drawn: bust, half body, and full body. Bust refers to torso-up or shoulders-up. Bust art is great for profile pictures or even emotes. Half body refers to waist-up, thighs-up, or knee-up depending on the artist. Full body refers to the full body being visible from head to toe. Artists can also offer different styles for different levels of detail and work: sketch/doodle, lineart, colored/monochrome, fully rendered, etc. Additional characters add to the cost by usually 50% to 100% of the base character cost depending on the artist. Intricate/complicated details and additional objects like armor, weapons, and animal companions can also add to the cost. Backgrounds are usually not included. Some artists offer a simple white/transparent background, solid color, or gradient background for free. A more complex background will add to the cost. Sometimes, requesting a NSFW artwork will increase the cost. Alts and variants can add to the cost depending on the complexity. Rush orders can also increase the cost. You can also request to be anonymous/uncredited in the publication or ask for the commission to be private/unpublished. Some artists charge extra for private commissions since they cannot monetize the product on Patreon or Gumroad.
 								</li>
 								<li>
 									<u><strong>Artist's Review of the Request:</strong></u><br/>
-									When you send a request to the artist, the artist will review it. Some artists will have to review hundreds of submissions before picking out a handful to fill up a limited number of slots. It can take time for the artist to review. An artist is not obliged to respond to your request. If you don't hear back from them for a while, then you should assume your request was not selected or approved. It is courteous to not bug the artist about reviewing your request. Artists sometimes operate on a first-come-first-serve basis, so they will take the first several comms that get submitted and decline the later requests. Otherwise, an artist will look at the full pool of submissions and select the ones they like regardless of submission timing.
+									When you send a request to the artist, the artist will review it. Some artists will have to review dozens of submissions before picking out a handful to fill up a limited number of slots. It can take time for the artist to review. An artist is not obliged to respond to your request. If you don't hear back from them for a while, then you should assume your request was not selected or approved. It is courteous to not bug the artist about reviewing your request. Artists sometimes operate on a first-come-first-serve basis, so they will take the first several comms that get submitted and decline the later requests. Otherwise, an artist will look at the full pool of submissions and select the ones they like regardless of submission timing.
 								</li>
 								<li>
 									<u><strong>Artist Accepts the Request:</strong></u><br/>
-									When your request is accepted by the artist, you may be placed into a queue. The artist will go through the requests in the queue one-by-one in order. Some artists just work on all requests at the same time and work in stages like all requests get a sketch, then all requests get lineart, then all requests get colors, etc. Artists may take time off to work on other projects in between requests especially if they have other responsibilities like real life, Patreon, pixivFANBOX, etc. Usually, artists will let you know their work style and plans to set expectations. You will have to wait patiently for your turn.
+									When your request is accepted by the artist, you may be placed into a queue. The artist will go through the requests in the queue one-by-one in order. Some artists just work on all requests at the same time and work in stages like all requests get a sketch, then all requests get lineart, then all requests get colors, etc. Artists may take time off to work on other projects in between requests especially if they have other responsibilities like real life (work or school or family), Patreon, pixivFANBOX, etc. Usually, artists will let you know their work style and plans to set expectations. You will have to wait patiently for your turn.
 								</li>
 								<li>
 									<u><strong>Payment:</strong></u><br/>
@@ -186,11 +217,11 @@
 								</li>
 								<li>
 									<u><strong>Work in Progress:</strong></u><br/>
-									When the artist is ready to start working on your request, they will usually start with a sketch or draft. This is the time when you can request changes to the character's expression, pose, and other details. You can also help remind artists if you think an important detail is missing. Artists will usually only take revisions at this stage. Otherwise, they may charge for additional revisions if you request them further down the workflow or even refuse to accept revisions. This is because it is difficult to incorporate changes once things are set in stone via lineart and coloring. Artists will work in stages: sketch then lineart then colors then rendering. They may ask for feedback at each stage to make sure you are getting what you requested. Some artists deliver the final product in one go after accepting the request without taking any input. Some artists will work closely with you to make revisions multiple times at each stage.
+									When the artist is ready to start working on your request, they will usually start with a sketch or draft. This is the stage at which you can request changes to the character's expression, pose, and other details. You can also help remind artists if you think an important detail is missing. Artists will usually only take major revisions at this stage. Otherwise, they may charge for additional revisions if you request them later on or even refuse to accept revisions. This is because it is difficult to incorporate changes once things are set in stone via lineart and coloring. Artists will work in stages: sketch then lineart then colors then rendering. They may ask for feedback at each stage to make sure you are getting what you requested. Some artists deliver the final product in one go after accepting the request without taking any input. Some artists will work closely with you to make revisions multiple times at each stage.
 								</li>
 								<li>
 									<u><strong>Delivery and Publication:</strong></u><br/>
-									When the final product is ready, the artist will deliver it to you through the messaging platform or email. Messaging platforms like Twitter DMs will usually compress the quality of the image, so the resolution and detail are lost. You can request the final full-resolution image to be delivered through email since attachments are not compressed in quality. You can sometimes request for the raw digital file (Photoshop PSD, Clip Studio Paint clip file, etc.) though it may come with an additional charge. Once delivered, the artist may publish the artwork publicly on their social media like Twitter, pixiv, tumblr, Reddit, Instagram, etc. Make sure to request for anonymity or commissioner credit before delivery (preferably when you send the initial request). If you request your commission to be private, you can help remind the artist during delivery. Depending on the artist, you may be allowed to use the commissioned artwork for your own personal use (not commercial). This includes sharing/reposting with artist credit and watermark, setting the image as your profile picture or banner, printing it out as a personal poster, etc. If you aren't sure, ask for permission from the artist. The artist will also sometimes ask for your permission to upload your commission to their Patreon, pixivFANBOX, etc. This is just another way for artists to monetize their work if you are okay with it. This is sometimes why a private commission will cost more than a public one since the artist cannot use the artwork to generate money or exposure.
+									When the final product is ready, the artist will deliver it to you through the messaging platform or email. Messaging platforms like Twitter DMs will usually compress the quality of the image, so the resolution and detail are lost. You can request the final full-resolution image to be delivered through email since attachments are not compressed in quality. You can sometimes request for the raw digital file (Photoshop PSD, Clip Studio Paint clip file, etc.) though it may come with an additional charge. Once delivered, the artist may publish the artwork publicly on their social media like Twitter, pixiv, tumblr, Reddit, Instagram, etc. Make sure to request for anonymity or commissioner credit before delivery (preferably when you send the initial request). If you request your commission to be private, you can help remind the artist during delivery. Depending on the artist, you may be allowed to use the commissioned artwork for your own personal use (not commercial use). This includes sharing/reposting with artist credit and watermark if any, setting the image as your profile picture or banner, printing it out as a personal poster, etc. If you aren't sure, ask for permission from the artist. The artist will also sometimes ask for your permission to upload your commission to their Patreon, pixivFANBOX, etc. This is just another way for artists to monetize their work if you are okay with it. This is sometimes why a private commission will cost more than a public one since the artist cannot use the artwork to generate income or exposure.
 								</li>
 								<li>
 									<u><strong>Tipping:</strong></u><br/>
@@ -202,11 +233,11 @@
 						<li>
 							<p id="general-joint">
 							<strong>How do you do joint/group commissions?</strong><br/>
-							A joint/group commission is one where there are multiple commissioners working together with the artist on a single piece. This type of commission is for people who are interested in combining ideas and characters and collaborating. This also allows the commissioners to split the cost of a larger and more complex piece. One person should be appointed as the organizer among the commissioners. Usually the organizer is the one who came up with the idea and approached the other commissioners.<br/>
+							A joint/group commission is one in which there are multiple commissioners working together with the artist on a single piece. This type of commission is for people who are interested in combining ideas and characters and collaborating. This also allows the commissioners to split the cost of a larger and more complex piece. One person should be appointed as the organizer among the commissioners. Usually the organizer is the one who came up with the idea and approached the other commissioners.<br/>
 							If you are the organizer, approach the artist when sending a request to let them know that you are intending to have a friend or a group of people be involved in the process. If the artist is comfortable working with multiple people or not, they will let you know. You can also take this time to request a quote to get a cost estimate on the piece. This is especially helpful if you are looking at different artist options and want to compare between them.<br/>
 							Once the request is accepted and the artist is ready, create a group chat with yourself, the artist, and the other commissioner(s). Request to have invoices sent separately to each commissioner. Payment info can be communicated discreetly through separate private messages rather than in the group chat, especially if payment info like a PayPal email address contains sensitive private information.<br/>
 							Coordinate with other the commissioner(s) and the artist to make sure everything looks good at each stage before moving on to the next stage. For instance, make sure everyone okays the sketch before the artist moves on to the lineart stage.<br/>
-							If the artist is not comfortable working with multiple people in a big group chat, the organizer should relay information and WIP to the other commissioners and then relay back a list of feedback to the artist. The artist will only directly work with the organizer in this way. Payment info can be sent to the artist directly and separately or sent to the organizer, or the artist's payment info can be relayed to the commissioners.<br/>
+							If the artist is not comfortable working with multiple people in a big group chat, the organizer should act as a bridge by relaying information and WIP to the other commissioners and then relaying back a list of feedback to the artist. In this way, the artist will only work directly with the organizer. Payment info can be sent to the artist directly and separately or sent to the organizer, or the artist's payment info can be relayed to the commissioners.<br/>
 							If the collaborative piece is especially large, you can ease the burden on the artist and let them work on the piece in parts so that they can work on other projects in between parts.
 							</p>
 						</li>
@@ -233,13 +264,13 @@
 					</ul>
 				</div>
 				<div class="tab-pane fade" id="nav-twitter" role="tabpanel" aria-labelledby="nav-twitter-tab">
-					<h5>Twitter Commissions</h5>
+					<h5>Twitter / X Commissions</h5>
 					<a href="https://twitter.com"><img class="logo" src="img/twitter.png"></a>
 					<ul>
 						<li>
 							<p>
-							<strong>Why Twitter?</strong><br/>
-							Twitter is one of the largest social media websites/applications in the world. It's a great platform for an artist to publish their artwork, gain a following, and interact with fans and other artists. For these reasons, it's a great place to advertise open commissions and communicate with commissioners through Twitter's direct messaging (DM) feature. Similar sites include Instagram and Facebook.
+							<strong>Why Twitter / X?</strong><br/>
+							X (formerly known as Twitter but referred to as Twitter in the rest of this site) is one of the largest social media websites/applications in the world. It's a great platform for an artist to publish their artwork, gain a following, and interact with fans and other artists. For these reasons, it's a great place to advertise open commissions and communicate with commissioners through Twitter's direct messaging (DM) feature. Similar sites include Instagram and Facebook and Bluesky (however Bluesky does not have a DM feature at the moment).
 							</p>
 						</li>
 						<li>
@@ -251,10 +282,10 @@
 						<li>
 							<p>
 							<strong>How do I communicate with an artist on Twitter?</strong><br/>
-							Most of the time, an artist on Twitter will use Twitter DMs to communicate with you. Sometimes, they will use email or even Discord instead (check their bio/price sheet/ToS). Some artists will have read receipts turned off, so it is possible that they have read your message but have not responded or will not respond. If they have not responded to your request after some time, then assume your request was not accepted and move on. If they have not responded to your message during the work in progress stage, then give them some time before reminding them for a response.
+							Most of the time, an artist on Twitter will use Twitter DMs to communicate with you. Sometimes, they will use email or even Discord instead (check their bio/price sheet/ToS). Some artists will have read receipts turned off, so it is possible that they have read your message but have not responded or will not respond. If they have not responded to your request after some time, then assume your request was not accepted and move on. If they have not responded to your message during the work in progress stage, then give them some time before reminding them for an update.
 							</p>
 							<img class="images" src="img/twitter_dm.png"><br/>
-							<p class="images-caption">The mail icon is for sending a DM to the artist. If the icon is missing, then the artist has DMs closed. You can also follow the artist so that their tweets can show up on your timeline feed.</p>
+							<p class="images-caption">The mail icon is for sending a DM to the artist. If the icon is missing, then the artist has DMs closed. You can also follow the artist so that their tweets can show up on your timeline feed. Due to a change in 2023, you may need to be a Verified member (subscribed to X Premium) in order to send a message to an artist. In this case, you should assume that DMs are closed or accidentally closed due to an incorrect setting on the artist's end.</p>
 						</li>
 						<li>
 							<p>
@@ -266,15 +297,15 @@
 							<p>
 							<strong>What does commissioning a Twitter artist look like?</strong><br/>
 							<ul>
-								<li><strong>First steps:</strong> sign up for an account on <a href="https://twitter.com">Twitter</a> and set up a payment method (the most popular method is <a href="https://www.paypal.com/">PayPal</a>).</li>
-								<li><strong>Opening:</strong> check if the artist is open to take commissions.</li>
-								<li><strong>Review:</strong> check the terms of service and options before sending a request.</li>
-								<li><strong>Request:</strong> send a request and include details like the type of commission, character/franchise/OC, references, background, anonymous/private, and other details (in the proper format that the artists requests if any).</li>
-								<li><strong>Acceptance:</strong> the artist will let you know if they decide to take your request.</li>
-								<li><strong>Payment:</strong> payment is usually done upfront, but it can sometimes be done after a certain stage, at the end after completion, or in two half payments.</li>
+								<li><strong>First steps:</strong> Sign up for an account on <a href="https://twitter.com">Twitter</a> and set up a payment method (the most popular method is <a href="https://www.paypal.com/">PayPal</a>).</li>
+								<li><strong>Opening:</strong> Check if the artist is open to take commissions.</li>
+								<li><strong>Review:</strong> Check the terms of service and options before sending a request.</li>
+								<li><strong>Request:</strong> Send a request and include details like the type of commission, character/franchise/OC, references, background, anonymous/private, and other details (in the proper format that the artists requests if any).</li>
+								<li><strong>Acceptance:</strong> The artist will let you know if they decide to take your request.</li>
+								<li><strong>Payment:</strong> Payment is usually done upfront, but it can sometimes be done after a certain stage, at the end after completion, or in two half payments.</li>
 								<li><strong>Work in progress:</strong> the artist will usually work in stages and ask for feedback at certain stages</li>
-								<li><strong>Revision:</strong> sometimes the artist will ask for feedback and if you want anything revised. Keep in mind that major changes to the form and concept usually cannot be accomodated past the lineart stage. But, colors can be adjusted in the coloring stage of course.</li>
-								<li><strong>Delivery:</strong> when the artist has completed the artwork, they will deliver it to you. If you requested to be anonymous or to keep the commission private, you can remind them at this point. Otherwise, you can let them know it is okay to publish the artwork or tag you as the commissioner. Sometimes, artists will not publish the artwork if they don't want to or will not tag you as the commissioner (keeping all commissions anonymous). Sometimes, an artist will ask you to not publish the artwork or to keep the artist anonymous.</li>
+								<li><strong>Revision:</strong> Sometimes the artist will ask for feedback and if you want anything revised. Keep in mind that major changes to the form and concept usually cannot be accomodated past the lineart stage. But, colors can be adjusted in the coloring stage of course.</li>
+								<li><strong>Delivery:</strong> When the artist has completed the artwork, they will deliver it to you. If you requested to be anonymous or to keep the commission private, you can remind them at this point. Otherwise, you can let them know it is okay to publish the artwork or tag you as the commissioner. Sometimes, artists will not publish the artwork if they don't want to or will not tag you as the commissioner (keeping all commissions anonymous). Sometimes, an artist will ask you to not publish the artwork or to keep the artist anonymous.</li>
 							</ul>
 							</p>
 						</li>
@@ -287,7 +318,7 @@
 						<li>
 							<p>
 							<strong>What is Skeb?</strong><br/>
-							Skeb is a website for commissioners to make requests to (primarily) Japanese artists. Skeb takes care of the language barrier using DeepL's machine translation, so commissioners can write their request in their native language and it will be translated to Japanese for the artist. Skeb also takes care of the payment method, so artists and commissioners do not need to worry about charges and refunds and currency exchange. Skeb applies a percentage servvice fee to commissions. The default is a 9.8% fee applied on top of the charge. This can be reduced down to 6.8% if the artists posts their Skeb page URL on their Twitter account. Sometimes, Skeb will have a special promotion period when the fee is waived. Many artists will open up and sometimes even lower their prices to entice commissioners to take advantage of the waived fee promotion period.
+							Skeb is a website for commissioners to make requests to (primarily) Japanese artists. Skeb takes care of the language barrier using DeepL's machine translation, so commissioners can write their request in their native language and it will be translated to Japanese for the artist. Skeb also takes care of the payment method, so artists and commissioners do not need to worry about charges and refunds and currency exchange. Skeb applies a percentage service fee to commissions. The default is a 9.8% fee taken from the total amount. This can be reduced down to 6.8% if the artists posts their Skeb page URL on their Twitter account. Sometimes, Skeb will have a special promotion period when the fee is waived. Many artists will open up and sometimes even lower their prices to entice commissioners to take advantage of the waived fee promotion period and earn more money per commission.
 							</p>
 						</li>
 						<li>
@@ -334,7 +365,7 @@
 								</li>
 								<li>
 									<u><strong>Creating and Sending the Request:</strong></u><br/>
-									You can write the request in English or whichever language you prefer. It gets translated to Japanese for the artist using <a href="https://www.deepl.com/translator">DeepL</a>, machine translation service. It's recommended to write out your request in English, translate it to Japanese on DeepL, take the translated Japanese text and translate it back to English on DeepL, and then see if that makes sense to you. After adjusting the text to make sure the meaning isn't lost or altered, take your English request text and plop it into the request text box. You can also include URLs in the request text to Google Drives/Google Docs/imgur galleries/other URLs for image references. You're not allowed to include additional request text in those links to skirt the character limit of course. Then, there are some other options you can play around with like NSFW/SFW type, anonymous, with/without addressee name, public/private, auto translation (should be turned on if you're going write the request in English), etc. Keep in mind that if your request is public, your request text can be publicly viewable by other users when it is delivered.<br/><br/>
+									You can write the request in English or whichever language you prefer. It gets translated to Japanese for the artist using <a href="https://www.deepl.com/translator">DeepL</a>, machine translation service. It's recommended to write out your request in English, translate it to Japanese on DeepL, take the translated Japanese text and translate it back to English on DeepL, and then see if that makes sense to you. After adjusting the text to make sure the meaning isn't lost or altered, take your English request text and plop it into the request text box. You can also include URLs in the request text to Google Drives/Google Docs/imgur galleries/imgchest galleries/other URLs for image references. You're not allowed to include additional request text in those links to skirt the character limit of course. Due to a change in 2023, imgur albums that are detected to holding NSFW images cannot be opened or can be completely deleted. You should use Google Drive or imgchest as alternative when sharing NSFW images. Then, there are some other options you can play around with like NSFW/SFW type, anonymous, with/without addressee name, public/private, auto translation (should be turned on if you're going write the request in English), etc. Keep in mind that if your request is public, your request text can be publicly viewable by other users when it is delivered.<br/><br/>
 									<img class="images-medium" src="img/skeb_request.png"><br/>
 									<img class="images" src="img/skeb_translate.png"><br/>
 									<p class="images-caption">Use DeepL to translate your English request to Japanese and then back to English to make sure the intent and description are not lost or altered. You can also include Japanese words and phrases to your English request in case you think DeepL may not translate it properly.</p>
@@ -403,7 +434,7 @@
 								</li>
 								<li>
 									<u><strong>Creating and Sending the Request:</strong></u><br/>
-									You can write the request in English or whichever language you prefer. It gets translated to Japanese for the artist using <a href="https://www.deepl.com/translator">DeepL</a>, machine translation service. It's recommended to write out your request in English, translate it to Japanese on DeepL, take the translated Japanese text and translate it back to English on DeepL, and then see if that makes sense to you. After adjusting the text to make sure the meaning isn't lost or altered, take your English request text and just plop it into the text box. You can also include URLs in the request text to Google Drives/Google Docs/imgur galleries/other URLs for image references. You're not allowed to include additional request text in those links to skirt the character limit of course. You can then add tags that are relevant to your request like the names of the character, franchise, series, etc. Select if you want a SFW/all ages or NSFW/R-18 request (if offered). Then, choose whether or not you want to be anonymous. Keep in mind that if your request is accepted, your request text will be publicly viewable by other users while it's in queue and after it's delivered.<br/><br/>
+									You can write the request in English or whichever language you prefer. It gets translated to Japanese for the artist using <a href="https://www.deepl.com/translator">DeepL</a>, machine translation service. It's recommended to write out your request in English, translate it to Japanese on DeepL, take the translated Japanese text and translate it back to English on DeepL, and then see if that makes sense to you. After adjusting the text to make sure the meaning isn't lost or altered, take your English request text and just plop it into the text box. You can also include URLs in the request text to Google Drives/Google Docs/imgur galleries/imgchest galleries/other URLs for image references. You're not allowed to include additional request text in those links to skirt the character limit of course. Due to a change in 2023, imgur albums that are detected to holding NSFW images cannot be opened or can be completely deleted. You can then add tags that are relevant to your request like the names of the character, franchise, series, etc. Select if you want a SFW/all ages or NSFW/R-18 request (if offered). Then, choose whether or not you want to be anonymous. Keep in mind that if your request is accepted, your request text will be publicly viewable by other users while it's in queue and after it's delivered.<br/><br/>
 									<img class="images" src="img/pixiv_request.png"><br/><br/>
 									<img class="images" src="img/skeb_translate.png"><br/>
 									<p class="images-caption">Use DeepL to translate your English request to Japanese and then back to English to make sure the intent and description are not lost or altered. You can also include Japanese words and phrases to your English request in case you think DeepL may not translate it properly.</p>
@@ -411,6 +442,69 @@
 								<li>
 									<u><strong>Approval and Completion:</strong></u><br/>
 									Once you send the request, you wait for the artist. The artist can approve or reject your request. If your request is approved, the artist now has a deadline to complete your request. You'll get a notification when it's been completed. The artist will deliver the images as the final product and may include a gift file as well (the gift file is usually the raw version of the artwork or even a PSD file). You don't have the option to tip the artist, but you can send a thank you message, which is called a fan letter. If the artist does not complete before the deadline, you will be refunded automatically (though it may take a few days depending on the payment method). If the artist makes a mistake or misinterprets your request, you just have to deal with it. You cannot request a correction or retake, and you generally can't get refunded for mistakes. If it's really egregious, then you can try to contact pixiv support, but they will probably only communicate in Japanese and may not be very lenient.
+								</li>
+							</ul>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-pane fade" id="nav-vgen" role="tabpanel" aria-labelledby="nav-vgen-tab">
+					<h5>VGen Commissions</h5>
+					<a href="https://vgen.co/"><img class="logo" src="img/vgen.png"></a>
+					<ul>
+						<li>
+							<p>
+							<strong>What is VGen?</strong><br/>
+							VGen is a website for commissioners to make requests to artists (primarily Western and non-Japanese artists). It is an alternative to working with artists on Twitter since DM inboxes can become messy and hard to manage. Twitter was not designed to be a platform for art commissions while VGen was designed to be one. It can also be considered an English-focused competitor to the Japanese-focused Skeb.
+							</p>
+						</li>
+						<li>
+							<p>
+							<strong>What is special about VGen? Why VGen?</strong><br/>
+							VGen is primarily for Western and non-Japanese artists and therefore also Western and non-Japanese commissioners. Skeb and pixiv have a heavy focus on Japanese artists and commissioners. pixiv forces users to set their location to Japan and language to Japanese in order to send NSFW requests for example. VGen also allows the commissioner and artists to communicate and collaborate unlike Skeb and pixiv. Commissioners who don't want to deal with the language barrier and who want to communicate with artists during the commissioning process can use VGen as their commissioning platform.<br/>
+							</p>
+						</li>
+						<li>
+							<p>
+							<strong>What are some quirks about VGen?</strong><br/>
+							VGen, unlike Skeb and pixiv, does allow commissioners to communicate with artists during the process. VGen has a direct messaging feature that allows the artist to chat with the commissioner. The commissioner can also enter an alternate contact method like an email address in case the artist prefers that method or could not get a response from the commissioner on VGen. Just like Skeb and pixiv for the commissioner's benefit, the artist is set a hard deadline and refunds are automatic.<br/>
+							When you follow an artist, you can receive an email notification when they open commissions. You can also be notified if they add a new commission service. Services show up on the artist's page. Each service is an option the commissioner can choose with details on what is offered, some examples, pricing options, and terms of service.<br/>
+							VGen has a unique feature of commissioner and artist reviews. Upon completion of a request, the commissioner can enter a review of the artist which will be public for other commissioners to see. The artist can also enter a review of the commissioner which will be public for future artists to see. This encourages both commissioners and artists to be professional and friendly in order to give each other positive public reviews.
+							</p>
+						</li>
+						<li>
+							<p>
+							<strong>How can I find artists on VGen?</strong><br/>
+							You may notice artists have their VGen link in their Twitter bio or their VGen tweet pinned to their Twitter feed. The <a href="https://vgen.co/">VGen home page</a> includes a navigation section at the top to browse through service categories to search for open artists. Being able to search for artists and filter them based on service category is something Skeb and pixiv lack.
+							</p>
+						</li>
+						<li>
+							<p>
+							<strong>What does commissioning an artist on VGen look like?</strong><br/>
+							<ul>
+								<li>
+									<u><strong>Sign Up:</strong></u><br/>
+									First sign up for <a href="https://vgen.co/">VGen</a>. Technically, you do not need an account, but having an account is more convenient for both the commissioner and the artist. Also some artists require a VGen account and do not accept requests from guest accounts. You do not need to enter a payment method yet since you will enter that information when sending a request. Debit and credit cards are always accepted by all artists. However, some artists also accept payment through PayPal, Apple Pay, Google Pay, etc. through VGen.
+								</li>
+								<li>
+									<u><strong>Preparing to Send a Request:</strong></u><br/>
+									To request on VGen, start by checking if the artist is accepting requests. You will see a green bar on their profile page that says "Available for new projects" with some service options listed below in the Commission section. If the artist is open and is offering a service that you are interested in, click on the service that you want to request. The service modal will open up with example works, starting price, pricing details, terms of sevice, and payment methods. Generally details about requesting multiple characters will be listed, but details on alternate versions and variants may not be listed. If you're unsure about any of the detail, you can reach out to the artist on VGen DM or on another platform to discuss.
+								</li>
+								<li>
+									<u><strong>Creating and Sending the Request:</strong></u><br/>
+									Once you are ready, you can write up your request and send it to the artist. You should write the request in English since VGen does not offer a machine translation feature. You can also include URLs in the request text to Google Drives/Google Docs/imgur galleries/imgchest galleries/other URLs for image references. Due to a change in 2023, imgur albums that are detected to holding NSFW images cannot be opened or can be completely deleted. You can also attach files of reference images.
+								</li>
+								<li>
+									<u><strong>Review the Artist's Proposal:</strong></u><br/>
+									The artist will review your request and prepare a tailored proposal for the project if they are interested in accepting. The proposal will have the project scope: what they will work on and other important details based on your request. There will also be a timeline: the estimated start date and guaranteed delivery date. The last section will be the payment section with the proposed cost.
+								</li>
+								<li>
+									<u><strong>Approval and Completion:</strong></u><br/>
+									If you want to approve the proposal, you must complete the payment through one of the accepted payment methods. Once you have paid, the project is locked in.<br/>
+									You will then wait for the artist to start your request. You will receive a notification if they try to contact you on VGen, or they will try to reach out to you through an alternate contact method (Twitter, Discord, email). Check your VGen notification settings to make sure you will get an email when you get messaged on VGen. Try not to message the artist before the request has been started. You should only message them after they have started and have reached out to you for feedback.<br/>
+									This part of the process will be similar to commissioning on Twitter or any other platform (minus Skeb and pixiv). You will communicate with the artist as they iterate and make progress.<br/>
+									Eventually, the project will be completed and hopefully completed before the guaranteed deadline. If the project is not completed before the guaranteed deadline, then the project is cancelled and you will be refunded automatically. Upon project completion, the artist will upload a file as "Verfied media" to represent the final product. If the media misrepresents the completed work and the project proposal, you will have the option to report an issue to VGen.<br/>
+									You will also have the option to send a tip and also submit a review of the artist. The review can be public or private. It can also be anonymous. A public review is helpful since other commissioners can check the reviews. The artist will also submit a review about you which will be public to the artists that you send requests to in the future.
 								</li>
 							</ul>
 							</p>
@@ -446,7 +540,7 @@
 								</li>
 								<li>
 									<u><strong>Creating and Sending the Request:</strong></u><br/>
-									Write your request in English or whichever language the artist prefers. The site may not have an automatic machine translation feature. There may be a character limit for the request text. The artist will generally have the prices listed out and explained as different options. The site may have a feature for you to attach reference images, but if you have additional images, you can include URLs in the request text to Google Drives/Google Docs/imgur galleries/other URLs. These sites sometimes also have options to upgrade and customize your request for additional money. Once you are ready, you can submit your request. The website may add a fee on top of the price. Once submitted, the request will be reviewed by the artist and can be accepted or rejected. If you have communicated with the artist beforehand on the idea and they approved it at that point, then your request will usually be accepted when formally submitted through the website.
+									Write your request in English or whichever language the artist prefers. The site may not have an automatic machine translation feature. There may be a character limit for the request text. The artist will generally have the prices listed out and explained as different options. The site may have a feature for you to attach reference images, but if you have additional images, you can include URLs in the request text to Google Drives/Google Docs/imgur galleries/imgchest galleries other URLs. Due to a change in 2023, imgur albums that are detected to holding NSFW images cannot be opened or can be completely deleted. These sites sometimes also have options to upgrade and customize your request for additional money. Once you are ready, you can submit your request. The website may add a fee on top of the price. Once submitted, the request will be reviewed by the artist and can be accepted or rejected. If you have communicated with the artist beforehand on the idea and they approved it at that point, then your request will usually be accepted when formally submitted through the website.
 								</li>
 								<li>
 									<u><strong>Creating and Sending the Request:</strong></u><br/>
